@@ -2,6 +2,7 @@
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
+          <p href="#" class="d-block">{{ config('app.name') }}</p>
     </a>
 
     <!-- Sidebar -->

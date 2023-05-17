@@ -30,7 +30,7 @@
       </div><!-- /.container-fluid -->
     </section>
     
-    <div class="modal fade" id="saveUserData">
+    <div class="modal fade" id="addUserData">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -132,7 +132,7 @@
             <div class="card">
               <div class="card-header">
                 <?php if($role == 1) { ?>
-                <button type="button" class="btn btn-sm btn-info float-right" data-toggle="modal" data-target="#saveUserData">
+                <button type="button" class="btn btn-sm btn-info float-right" data-toggle="modal" data-target="#addUserData" onclick="addUserData()">
                 Add User
                 </button>
                 <?php } ?>
@@ -163,17 +163,17 @@
             list();
         });
         
-        // function reset(){
-        //     document.getElementById('user_id').value= "";
-        //     document.getElementById('image').value= "";
-        //     document.getElementById('name').value= "";
-        //     document.getElementById('email').value= "";
-        //     document.getElementById('password').value= "";
-        //     document.getElementById('phone').value= "";
-        //     document.getElementById('gender').value= "";
-        //     document.getElementById('address').value= "";
-        //     document.getElementById('bio').value= "";
-        // }
+        function reset(){
+            document.getElementById('user_id').value= "";
+            document.getElementById('image').value= "";
+            document.getElementById('name').value= "";
+            document.getElementById('email').value= "";
+            document.getElementById('password').value= "";
+            document.getElementById('phone').value= "";
+            document.getElementById('gender').value= "";
+            document.getElementById('address').value= "";
+            document.getElementById('bio').value= "";
+        }
         
         function list() { 
             $.ajax({
@@ -199,6 +199,9 @@
             });
         }
         
+        function addUserData() {
+            reset();
+        }
         function saveUser(event) {
             event.preventDefault();
             var user_id = $('#user_id').val();
@@ -237,7 +240,7 @@
                     success: function (data) {
                         if (data.success) {
                             alert(data.success);
-                            $('#saveUserData').modal('hide');
+                            $('#addUserData').modal('hide');
                             list();
                         }
                     }
@@ -257,21 +260,14 @@
                     success: function (data) {
                         if (data.success) {
                             alert(data.success);
-                            $('#saveUserData').modal('hide');
+                            $('#addUserData').modal('hide');
                             list();
                         }
                     }
                 })
             }
         }
-
-        function addUser(id) {
-            $('#password').show();
-            document.getElementById('id').value= "";
-            document.getElementById('name').value= "";
-            document.getElementById('email').value= "";
-            document.getElementById('phone').value= "";
-        }
+        
         function viewUser($id) {
             $('#password').hide();
             var id = $id;
