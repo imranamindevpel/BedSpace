@@ -13,9 +13,6 @@ class UserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
-            'gender' => $this->profile->gender,
-            'phone' => $this->profile->phone,
-            'address' => $this->profile->address,
             'action' => '<div class="btn-group"><button class="btn btn-success" data-toggle="modal" data-target="#addUserData" onclick="viewUser('.$this->id.')">View</button>
             <button class="btn btn-info" data-toggle="modal" data-target="#addUserData" onclick="editUser('.$this->id.')">Edit</button>
             <button class="btn btn-danger" onclick="deleteUser('.$this->id.')">Delete</button>',

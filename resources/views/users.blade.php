@@ -280,10 +280,10 @@
                 success: function (data) {
                     document.getElementById('name').value= data.name;
                     document.getElementById('email').value= data.email;
-                    document.getElementById('phone').value= data.profile.phone;
-                    document.getElementById('gender').value= data.profile.gender;
-                    document.getElementById('address').value= data.profile.address;
-                    document.getElementById('bio').value= data.profile.bio;
+                    // document.getElementById('phone').value= data.profile.phone;
+                    // document.getElementById('gender').value= data.profile.gender;
+                    // document.getElementById('address').value= data.profile.address;
+                    // document.getElementById('bio').value= data.profile.bio;
                 }
             })
         }
@@ -298,10 +298,10 @@
                 success: function (data) {
                     document.getElementById('name').value= data.name;
                     document.getElementById('email').value= data.email;
-                    document.getElementById('phone').value= data.profile.phone;
-                    document.getElementById('gender').value= data.profile.gender;
-                    document.getElementById('address').value= data.profile.address;
-                    document.getElementById('bio').value= data.profile.bio;
+                    // document.getElementById('phone').value= data.profile.phone;
+                    // document.getElementById('gender').value= data.profile.gender;
+                    // document.getElementById('address').value= data.profile.address;
+                    // document.getElementById('bio').value= data.profile.bio;
                 }
             })
         }
